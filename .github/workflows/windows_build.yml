@@ -29,5 +29,5 @@ jobs:
       - name: upload
         uses: actions/upload-artifact@v4
         with:
-          name: gui-windows
-          path: dist/gui.exe
+          name: gui-${{ matrix.os }}
+          path: dist
