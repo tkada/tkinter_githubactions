@@ -8,10 +8,10 @@ on:
 jobs:
   build:
     name: Run the Windows build
-    runs-on: ${{matrix.os}}
-      strategy:
-        matrix:
-          os: [windows-latest,macos-latest]
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
