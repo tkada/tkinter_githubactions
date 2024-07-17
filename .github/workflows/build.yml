@@ -1,4 +1,4 @@
-name: Run the Windows build
+name: Build
 on:
   workflow_dispatch: {}
   push:
@@ -7,7 +7,7 @@ on:
       - main
 jobs:
   build:
-    name: Run the Windows build
+    name: Run build
     strategy:
       matrix:
         os: [windows-latest, macos-latest]
